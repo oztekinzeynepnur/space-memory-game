@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="satelliteGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#95a5a6"/>
+            <stop offset="100%" style="stop-color:#7f8c8d"/>
+        </linearGradient>
+        <filter id="glow">
+            <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+            <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+    <rect x="80" y="70" width="40" height="60" fill="url(#satelliteGradient)" filter="url(#glow)"/>
+    <rect x="30" y="90" width="140" height="10" fill="#7f8c8d"/>
+    <circle cx="100" cy="100" r="15" fill="#3498db"/>
+    <path d="M60 90 L80 70 M140 90 L120 70" stroke="#7f8c8d" stroke-width="3"/>
+</svg>

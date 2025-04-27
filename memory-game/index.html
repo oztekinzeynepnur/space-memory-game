@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uzay Hafıza Oyunu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="stars"></div>
+    
+    <nav>
+        <div class="nav-wrapper blue-grey darken-4">
+            <a href="#" class="brand-logo center">Uzay Hafıza Oyunu</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <div class="button-container center-align">
+                    <button id="newGameBtn" class="btn waves-effect waves-light blue darken-2">
+                        <i class="material-icons left">refresh</i>Yeni Oyun
+                    </button>
+                    <button id="changeGameMode" class="btn waves-effect waves-light purple darken-2">
+                        <i class="material-icons left">games</i>Mod Değiştir
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="playerStats" class="row"></div>
+
+        <div id="game-board" class="row"></div>
+    </div>
+
+    <!-- Oyun Modu Seçim Modalı -->
+    <div id="gameModeModal" class="modal">
+        <div class="modal-content">
+            <h4>Oyun Modu Seçin</h4>
+            <div class="row">
+                <div class="col s12 m4">
+                    <div class="mode-card center-align" data-mode="single">
+                        <i class="material-icons large">person</i>
+                        <h5>Tek Oyuncu</h5>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="mode-card center-align" data-mode="two">
+                        <i class="material-icons large">people</i>
+                        <h5>İki Oyuncu</h5>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="mode-card center-align" data-mode="bot">
+                        <i class="material-icons large">smart_toy</i>
+                        <h5>Bot ile Oyna</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Kazanma Modalı -->
+    <div id="winModal" class="modal">
+        <div class="modal-content center-align">
+            <h4>Tebrikler!</h4>
+            <div id="winnerStats"></div>
+            <button id="playAgainBtn" class="btn waves-effect waves-light green">
+                <i class="material-icons left">replay</i>Tekrar Oyna
+            </button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

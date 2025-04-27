@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="ufoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#9b59b6"/>
+            <stop offset="100%" style="stop-color:#8e44ad"/>
+        </linearGradient>
+        <filter id="glow">
+            <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+            <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+    <ellipse cx="100" cy="100" rx="70" ry="25" fill="url(#ufoGradient)" filter="url(#glow)"/>
+    <circle cx="100" cy="90" r="30" fill="#8e44ad"/>
+    <circle cx="100" cy="90" r="25" fill="#ecf0f1"/>
+    <path d="M60 100 L80 130 M100 100 L100 130 M140 100 L120 130" stroke="#8e44ad" stroke-width="3"/>
+</svg>
