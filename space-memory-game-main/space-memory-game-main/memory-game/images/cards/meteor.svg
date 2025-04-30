@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="meteorGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#e67e22"/>
+            <stop offset="100%" style="stop-color:#d35400"/>
+        </linearGradient>
+        <filter id="glow">
+            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+            <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+    <path d="M160 40 L40 160 Q80 160 100 140 Q120 120 160 40" fill="url(#meteorGradient)" filter="url(#glow)"/>
+    <path d="M160 40 Q120 80 100 100" stroke="#d35400" stroke-width="4" fill="none"/>
+</svg>
